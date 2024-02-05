@@ -1,0 +1,20 @@
+.container-best-seller {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    background-image: url("./../../../../img/almendras.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 70vh;
+}
+.info-best-seller {
+    padding: 1rem 2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+    color: black;
+}

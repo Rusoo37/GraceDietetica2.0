@@ -1,0 +1,36 @@
+.container-suscribirse {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #7b7774, #776553);
+    padding: 2rem 0;
+}
+.container-suscribirse h1 {
+    color: white;
+}
+.container-suscribirse p {
+    color: white;
+}
+.form-suscribirse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-suscribirse input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+.form-suscribirse button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0 0.3rem 0.3rem 0;
+    cursor: pointer;
+    background-color: rgb(104, 198, 104);
+    color: white;
+}
+.form-suscribirse button:hover {
+    box-shadow: 0 0 5px 1px rgb(104, 198, 104);
+}

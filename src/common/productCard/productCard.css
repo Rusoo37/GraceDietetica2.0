@@ -1,0 +1,22 @@
+.container-carta-producto {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    transition: all 0.5s ease;
+}
+.container-carta-producto:hover {
+    box-shadow: 0 2px 10px 2px #f2f2f2;
+}
+.container-carta-producto img {
+    cursor: pointer;
+}
+.container-carta-producto p {
+    margin: 0;
+}
+.price {
+    color: var(--color--price);
+}

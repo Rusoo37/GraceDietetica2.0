@@ -1,0 +1,93 @@
+.container-first-navbar {
+    width: 100%;
+    background-color: var(--color--background-first-navbar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+.container-redes-navbar {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.container-redes-navbar img {
+    width: 3%;
+    cursor: pointer;
+}
+.container-redes-navbar p {
+    color: white;
+}
+
+/* NAVBAR */
+
+.container-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color--background-navbar);
+    padding: 0.2rem 0;
+    box-shadow: 0 0 0 transparent;
+    transition: all 0.3s ease, max-height 0.3s ease;
+}
+.container-navbar.scrolled {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s ease;
+    max-height: 4rem;
+    box-shadow: 0 0 10px 1px #b6c4c0;
+    opacity: 0.85;
+    max-height: 2rem;
+    transition: all 0.3s ease, max-height 0.3s ease;
+    padding: 1rem 0;
+}
+.logo-container-navbar {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.logo-navbar {
+    width: 20%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.logo-navbar img {
+    width: 65%;
+}
+.logo-navbar h4 {
+    margin: 0;
+    padding: 0;
+}
+.links-navbar {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+.link-nav {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.link-nav:hover {
+    color: white;
+    opacity: 0.8;
+}
+.links-navbar p {
+    cursor: pointer;
+}
+.links-navbar p:hover {
+    color: white;
+    opacity: 0.8;
+}

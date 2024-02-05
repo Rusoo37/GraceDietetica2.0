@@ -1,0 +1,19 @@
+.container-separador-home {
+    width: 100%;
+    background-color: var(--color--background--sepador--home);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem 0;
+}
+.container-info-separador {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.div-info-separador {
+    width: 33%;
+}

@@ -1,0 +1,12 @@
+.testimonio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.testimonio img {
+    width: 20%;
+}
+.testimonio p {
+    color: white;
+}

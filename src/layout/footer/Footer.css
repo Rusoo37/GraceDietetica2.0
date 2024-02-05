@@ -1,0 +1,46 @@
+.container-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    background-color: var(--color--background--footer);
+}
+.primera-parte-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    color: white;
+    padding-bottom: 1rem;
+}
+.info-empresa {
+    width: 40%;
+}
+.info-empresa img {
+    width: 15%;
+}
+.logo-footer {
+    display: flex;
+    color: white;
+    justify-content: start;
+    align-items: center;
+}
+.logo-footer h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.info-footer {
+    width: 15%;
+}
+.segunda-parte-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid grey;
+    color: white;
+}

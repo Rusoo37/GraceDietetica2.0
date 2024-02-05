@@ -1,0 +1,21 @@
+.container-testimonios {
+    width: 100%;
+    background-color: #104a59; /* Va una imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.testimonios h1 {
+    color: white;
+}
+.dos-testimonios {
+    display: flex;
+}

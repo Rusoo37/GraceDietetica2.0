@@ -1,0 +1,21 @@
+.container-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 100vh;
+    background-image: url("./../../../../img/fondo2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.container-info-header {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    color: white;
+}
+.container-info-header h1 {
+    font-size: 4.5rem;
+}

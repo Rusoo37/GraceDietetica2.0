@@ -1,0 +1,32 @@
+.container-segundo-separador {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #025e73;
+    gap: 1rem;
+    padding: 3rem 0;
+}
+.container-info-segundo-separador {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+.info-detallado-separador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    color: white;
+}
+.info-detallado-separador h3 {
+    margin: 0;
+    padding: 0;
+}
+.info-detallado-separador p {
+    margin: 0;
+    padding: 0;
+}
