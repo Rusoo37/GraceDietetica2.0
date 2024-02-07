@@ -7,21 +7,10 @@
     gap: 2rem;
     padding-bottom: 5rem;
 }
-.container-titulo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #f5f5f5;
-}
-.titulo {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .container-productos {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }

@@ -39,7 +39,7 @@
     top: 0;
     transition: all 0.3s ease;
     max-height: 4rem;
-    box-shadow: 0 0 10px 1px #b6c4c0;
+    box-shadow: 0 0 10px 1px #6b6c6c;
     opacity: 0.85;
     max-height: 2rem;
     transition: all 0.3s ease, max-height 0.3s ease;
@@ -74,6 +74,15 @@
     align-items: center;
     gap: 1rem;
     color: white;
+}
+.carrito-navbar img {
+    width: 50%;
+}
+.btn-cerrar {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
 }
 .link-nav {
     cursor: pointer;

@@ -12,7 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.4rem;
+    gap: 1rem;
+}
+.container-info-segundo-separador img {
+    width: 15%;
 }
 .info-detallado-separador {
     display: flex;

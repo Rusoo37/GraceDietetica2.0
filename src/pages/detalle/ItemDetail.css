@@ -16,8 +16,11 @@
 .primera-parte-detalle {
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+}
+.primera-parte-detalle img {
+    width: 90%;
 }
 .segunda-parte-detalle {
     width: 50%;

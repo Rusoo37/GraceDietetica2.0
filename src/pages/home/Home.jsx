@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import "./Home.css";
 import BestSeller from "./common/bestSeller/BestSeller";
 import Destacados from "./common/destacado/Destacados";
@@ -19,6 +20,7 @@ const Home = () => {
             <Testimonios />
             <SegundoSeparador />
             <Suscribirse />
+            <ToastContainer />
         </div>
     );
 };

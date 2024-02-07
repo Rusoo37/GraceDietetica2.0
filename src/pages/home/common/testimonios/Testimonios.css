@@ -4,18 +4,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("./../../../../img/fondoOpiniones.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: 0.7;
 }
 .testimonios {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    margin-bottom: 3rem;
 }
 .testimonios h1 {
     color: white;
 }
 .dos-testimonios {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }

@@ -1,0 +1,34 @@
+.container-card-carrito {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.primera-parte-carrito {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.segunda-parte-carrito {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+.segunda-parte-carrito p {
+    margin: 0;
+}
+.primera-segunda-parte-carrito {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.primera-segunda-parte-carrito h1 {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,23 @@
+.container-about-us {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 50vh;
+    margin-bottom: 3rem;
+}
+.container-info-about {
+    margin-top: 4rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.container-info-about div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

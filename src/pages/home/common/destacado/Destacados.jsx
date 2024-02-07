@@ -1,18 +1,25 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Destacados.css";
 import ProductCard from "../../../../common/productCard/ProductCard";
+import { ItemContext } from "../../../../context/ItemContext";
 
 const Destacados = () => {
-    const [productos, setProductos] = useState([1, 2, 3, 4]);
+    const { traerItems, items } = useContext(ItemContext);
+    useEffect(() => {
+        traerItems();
+    }, []);
+    const productosDestacados =
+        items.length > 0 && items.filter((producto) => producto.destacado);
     return (
         <div className="container-destacados">
             <div>
                 <h2>Productos Destacados</h2>
             </div>
             <div className="destacados">
-                {productos.map((producto, index) => (
-                    <ProductCard producto={producto} key={index} />
-                ))}
+                {productosDestacados.length > 0 &&
+                    productosDestacados.map((producto, index) => (
+                        <ProductCard producto={producto} key={index} />
+                    ))}
             </div>
         </div>
     );

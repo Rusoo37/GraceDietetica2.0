@@ -7,9 +7,9 @@ const ProductCard = ({ producto }) => {
             to={`/detalle/${producto.id}`}
             className="container-carta-producto"
         >
-            <img src="producto" alt="producto" />
-            <p>Nombre</p>
-            <p className="price">$25.32</p>
+            <img src={producto.imagen} alt="producto" />
+            <p>{producto.nombre}</p>
+            <p className="price">${producto.precio}</p>
         </Link>
     );
 };

@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ItemList from "./ItemList";
+import { ItemContext } from "../../context/ItemContext";
+import { useEffect } from "react";
 
 const ContainerItemList = () => {
-    const [productos, setProductos] = useState([1, 2, 3, 4]);
-    return <ItemList productos={productos} />;
+    const { traerItems, items } = useContext(ItemContext);
+    useEffect(() => {
+        traerItems();
+    }, []);
+
+    return <ItemList productos={items} />;
 };
 
 export default ContainerItemList;

@@ -1,18 +1,25 @@
 import ProductCard from "../../../../common/productCard/ProductCard";
+import { ItemContext } from "../../../../context/ItemContext";
 import "./nuevosProductos.css";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const NuevosProductos = () => {
-    const [productos, setProductos] = useState([1, 2, 3, 4]);
+    const { traerItems, items } = useContext(ItemContext);
+    useEffect(() => {
+        traerItems();
+    }, []);
+    const productosNuevos =
+        items.length > 0 && items.filter((producto) => producto.nuevo);
     return (
         <div className="container-nuevos-productos">
             <div>
                 <h2>Nuevos Productos</h2>
             </div>
             <div className="container-coleccion">
-                {productos.map((producto, index) => (
-                    <ProductCard producto={producto} key={index} />
-                ))}
+                {productosNuevos.length > 0 &&
+                    productosNuevos.map((producto, index) => (
+                        <ProductCard producto={producto} key={index} />
+                    ))}
             </div>
         </div>
     );

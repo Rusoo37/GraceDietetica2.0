@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "./../../img/logo.png";
+import carrito from "./../../img/carrito.png";
+import { LoginContext } from "../../context/LoginContext";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const { isLog, logOut } = useContext(LoginContext);
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
@@ -33,8 +36,21 @@ const Navbar = () => {
                     Productos
                 </Link>
                 <p>Contacto</p>
-                <p>Sobre Nosotros</p>
-                <p>Mi cuenta</p>
+                <Link to="/nosotros" className="link-nav">
+                    Sobre Nosotros
+                </Link>
+                {isLog ? (
+                    <button onClick={logOut} className="btn-cerrar">
+                        Cerrar sesión
+                    </button>
+                ) : (
+                    <Link to="login" className="link-nav">
+                        Mi cuenta
+                    </Link>
+                )}
+                <Link to="/carrito" className="carrito-navbar">
+                    <img src={carrito} alt="Carrito de compras" />
+                </Link>
             </div>
         </div>
     );
