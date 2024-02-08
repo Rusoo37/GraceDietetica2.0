@@ -5,7 +5,7 @@ import logo from "./../../img/logo.png";
 import carrito from "./../../img/carrito.png";
 import { LoginContext } from "../../context/LoginContext";
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const { isLog, logOut } = useContext(LoginContext);
     useEffect(() => {
@@ -20,6 +20,7 @@ const Navbar = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
     return (
         <div className={`container-navbar ${isScrolled ? "scrolled" : ""}`}>
             <div className="logo-container-navbar">
@@ -35,7 +36,16 @@ const Navbar = () => {
                 <Link to="/productos" className="link-nav">
                     Productos
                 </Link>
-                <p>Contacto</p>
+                <button
+                    className="link-nav"
+                    style={{
+                        background: "none",
+                        border: "none",
+                    }}
+                    onClick={() => scrollToSection("footer")}
+                >
+                    Contacto
+                </button>
                 <Link to="/nosotros" className="link-nav">
                     Sobre Nosotros
                 </Link>

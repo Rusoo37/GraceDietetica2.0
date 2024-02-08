@@ -36,4 +36,9 @@ export const routes = [
         path: "/carrito",
         Element: ContainerCarrito,
     },
+    {
+        id: "categoria",
+        path: "/categoria/:categoryName",
+        Element: ContainerItemList,
+    },
 ];

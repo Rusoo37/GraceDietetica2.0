@@ -8,6 +8,7 @@ import SegundoSeparador from "./common/segundoSeparador/SegundoSeparador";
 import SeparadorHome from "./common/separador/SeparadorHome";
 import Suscribirse from "./common/suscribirse/Suscribirse";
 import Testimonios from "./common/testimonios/Testimonios";
+import ScrollToUp from "../../common/scrollUp/ScrollToUp";
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
             <SegundoSeparador />
             <Suscribirse />
             <ToastContainer />
+            <ScrollToUp />
         </div>
     );
 };

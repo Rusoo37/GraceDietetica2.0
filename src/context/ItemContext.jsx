@@ -10,9 +10,18 @@ const ItemContextComponent = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const coleccionDb = import.meta.env.VITE_COLECCION;
 
-    const traerItems = () => {
-        let consulta = collection(db, coleccionDb);
+    const traerItems = (categoryName) => {
+        let productsCollection = collection(db, coleccionDb);
 
+        let consulta;
+        if (!categoryName) {
+            consulta = productsCollection;
+        } else {
+            consulta = query(
+                productsCollection,
+                where("categoria", "==", categoryName)
+            );
+        }
         getDocs(consulta)
             .then((res) => {
                 let newArr = res.docs.map((product) => ({

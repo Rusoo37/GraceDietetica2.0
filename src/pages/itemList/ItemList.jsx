@@ -2,6 +2,7 @@ import Filtros from "../../common/filtros/Filtros";
 import ProductCard from "../../common/productCard/ProductCard";
 import "./ItemList.css";
 import Titulos from "../../common/titulos/Titulos";
+import ScrollToUp from "../../common/scrollUp/ScrollToUp";
 
 const ItemList = ({ productos }) => {
     return (
@@ -14,6 +15,7 @@ const ItemList = ({ productos }) => {
                         <ProductCard producto={producto} key={index} />
                     ))}
             </div>
+            <ScrollToUp />
         </div>
     );
 };
