@@ -24,3 +24,8 @@
 .container-carrito button:hover {
     box-shadow: 0 0 5px 1px grey;
 }
+.container-btns-cart {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}

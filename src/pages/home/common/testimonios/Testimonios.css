@@ -1,13 +1,12 @@
 .container-testimonios {
     width: 100%;
-    background-color: #104a59; /* Va una imagen */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./../../../../img/fondoOpiniones.jpg");
+    background-image: url("./../../../../img/opinion4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    backface-visibility: 0.7;
+    background-position: center;
 }
 .testimonios {
     width: 100%;

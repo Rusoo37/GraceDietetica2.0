@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import "./ItemDetail.css";
 import Titulos from "../../common/titulos/Titulos";
 import { ToastContainer } from "react-toastify";
+import CounterContainer from "../../common/counter/ContainerCounter";
 
-const ItemDetail = ({ producto, agregarAlCarrito }) => {
+const ItemDetail = ({ producto, agregarAlCarrito, cantidadEnCarrito }) => {
     return (
         <div className="container-detalle">
             <Titulos titulo={producto.nombre} />
@@ -20,9 +21,11 @@ const ItemDetail = ({ producto, agregarAlCarrito }) => {
                         <p>{producto.descripcion}</p>
                     </div>
                     <div className="div-button-detalle">
-                        <button onClick={agregarAlCarrito} type="button">
-                            Añadir al carrito
-                        </button>
+                        <CounterContainer
+                            cantidadEnCarrito={cantidadEnCarrito}
+                            stock={producto.cantidad}
+                            agregarAlCarrito={agregarAlCarrito}
+                        />
                     </div>
                 </div>
             </div>
