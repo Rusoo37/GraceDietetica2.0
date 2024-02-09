@@ -21,3 +21,11 @@
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 600px) {
+    .container-info-about {
+        flex-direction: column-reverse;
+    }
+    .container-info-about div {
+        width: 100%;
+    }
+}

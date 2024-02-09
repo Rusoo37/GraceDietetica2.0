@@ -3,10 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./../../../../img/opinion4.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+}
+.opinionBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.6;
 }
 .testimonios {
     width: 100%;
@@ -17,6 +21,8 @@
     gap: 1rem;
     padding: 1rem;
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
 }
 .testimonios h1 {
     color: white;

@@ -4,10 +4,9 @@
     justify-content: center;
     align-items: center;
     width: 30%;
-    background-color: rgba(255, 255, 255, 0.688);
     border-radius: 2rem;
 }
-.testimonio img {
+.cita {
     width: 20%;
 }
 .testimonio p {

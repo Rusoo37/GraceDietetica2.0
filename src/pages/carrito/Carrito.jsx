@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductCarrito from "../../common/productCarrito/ProductCarrito";
 import Titulos from "../../common/titulos/Titulos";
 import "./Carrito.css";
@@ -36,7 +37,9 @@ const Carrito = ({ cart, getTotalPrice, clearCart }) => {
                 )}
             </div>
             <div className="container-btns-cart">
-                <button>Solicitar pedido</button>
+                <Link to="/checkOut" className="solicitar-pedido">
+                    Solicitar pedido
+                </Link>
                 <button
                     onClick={clearCart}
                     style={{

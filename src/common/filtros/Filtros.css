@@ -18,3 +18,8 @@
     background-color: #2b2b35;
     color: white;
 }
+@media (max-width: 650px) {
+    .container-filtros {
+        flex-wrap: wrap;
+    }
+}

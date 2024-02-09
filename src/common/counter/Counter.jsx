@@ -1,21 +1,10 @@
+import "./Counter.css";
+
 const Counter = ({ stock, contador, setContador, agregarAlCarrito }) => {
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
-                marginTop: "10px",
-            }}
-        >
+        <div className="container-counter">
             {stock !== 0 ? (
-                <div
-                    style={{
-                        display: "flex",
-                        justifyContent: "left",
-                        gap: "20px",
-                    }}
-                >
+                <div className="counter">
                     <button
                         disabled={contador <= 1}
                         variant="outlined"
@@ -25,7 +14,7 @@ const Counter = ({ stock, contador, setContador, agregarAlCarrito }) => {
                     >
                         -
                     </button>
-                    <h2 style={{ color: "black" }}>{contador}</h2>
+                    <h2>{contador}</h2>
                     <button
                         disabled={contador >= stock}
                         variant="outlined"
@@ -39,17 +28,10 @@ const Counter = ({ stock, contador, setContador, agregarAlCarrito }) => {
             ) : (
                 <p variant="h4">Sin stock</p>
             )}
-            <div
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginTop: "20px",
-                }}
-            >
+            <div className="container-agregar-counter">
                 <button
                     variant="outlined"
                     onClick={() => agregarAlCarrito(contador)}
-                    sx={{ width: 200, height: 40 }}
                     disabled={stock === 0 ? true : false}
                 >
                     Agregar al carrito

@@ -17,3 +17,27 @@
 .div-info-separador {
     width: 33%;
 }
+@media (max-width: 700px) {
+    .div-info-separador h3 {
+        font-size: 1.1rem;
+    }
+    .div-info-separador p {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 600px) {
+    .div-info-separador h3 {
+        font-size: 1rem;
+    }
+    .div-info-separador p {
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 500px) {
+    .div-info-separador h3 {
+        font-size: 1rem;
+    }
+    .div-info-separador p {
+        font-size: 0.6rem;
+    }
+}

@@ -1,5 +1,6 @@
 import AboutUs from "../pages/aboutUs/AboutUs";
 import ContainerCarrito from "../pages/carrito/ContainerCarrito";
+import ContainerCheckOut from "../pages/checkOut/ContainerCheckOut";
 import ContainerDetail from "../pages/detalle/ContainerDetail";
 import Home from "../pages/home/Home";
 import ContainerItemList from "../pages/itemList/ContainerItemList";
@@ -52,5 +53,10 @@ export const routes = [
         id: "privacidad",
         path: "/privacidad",
         Element: Privacidad,
+    },
+    {
+        id: "checkOut",
+        path: "/checkOut",
+        Element: ContainerCheckOut,
     },
 ];

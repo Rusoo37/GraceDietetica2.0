@@ -33,3 +33,25 @@
     margin: 0;
     padding: 0;
 }
+@media (max-width: 700px) {
+    .container-info-segundo-separador {
+        width: 30%;
+    }
+    .container-info-segundo-separador img {
+        width: 25%;
+    }
+    .info-detallado-separador h3 {
+        font-size: 1.1rem;
+    }
+    .info-detallado-separador p {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 400px) {
+    .container-info-segundo-separador {
+        gap: 0.2rem;
+    }
+    .container-info-segundo-separador img {
+        width: 35%;
+    }
+}

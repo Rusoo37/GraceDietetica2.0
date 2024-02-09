@@ -1,9 +1,15 @@
 import Testimonio from "../../../../common/testimonio/Testimonio";
 import "./Testimonios.css";
+import opinionBackground from "./../../../../img/opinion.jpg";
 
 const Testimonios = () => {
     return (
         <div className="container-testimonios">
+            <img
+                src={opinionBackground}
+                alt="fondo opiniones grace dietetica frutos secos"
+                className="opinionBackground"
+            />
             <div className="testimonios">
                 <h1>Testimonios</h1>
                 <div className="dos-testimonios">

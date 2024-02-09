@@ -100,3 +100,19 @@
     color: white;
     opacity: 0.8;
 }
+@media (max-width: 700px) {
+    .container-redes-navbar img {
+        width: 5%;
+    }
+    .carrito-navbar {
+        width: 100%;
+    }
+    .carrito-navbar img {
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .container-redes-navbar img {
+        width: 10%;
+    }
+}

@@ -24,8 +24,28 @@
 .container-carrito button:hover {
     box-shadow: 0 0 5px 1px grey;
 }
+.solicitar-pedido {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(197, 167, 167);
+}
+.solicitar-pedido:hover {
+    box-shadow: 0 0 5px 1px grey;
+}
 .container-btns-cart {
     width: 80%;
     display: flex;
     justify-content: space-between;
+}
+@media (max-width: 600px) {
+    .solicitar-pedido {
+        font-size: 0.8rem;
+    }
+    .container-carrito button {
+        font-size: 0.8rem;
+    }
 }

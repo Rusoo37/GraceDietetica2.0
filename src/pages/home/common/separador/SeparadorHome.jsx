@@ -5,21 +5,21 @@ const SeparadorHome = () => {
         <div className="container-separador-home">
             <div className="container-info-separador">
                 <div className="div-info-separador">
-                    <h3>FAST DELIVERY</h3>
+                    <h3>DELIVERY RÁPIDO</h3>
                     <p>
                         Consectetur adipiscing elit. Ut elit tellus, luctus nec
                         ullamcorper mattis, pulvinar dapibus.
                     </p>
                 </div>
                 <div className="div-info-separador">
-                    <h3>SECURE CHECKOUT</h3>
+                    <h3>PEDIDOS SEGUROS</h3>
                     <p>
                         Consectetur adipiscing elit. Ut elit tellus, luctus nec
                         ullamcorper mattis, pulvinar dapibus.
                     </p>
                 </div>
                 <div className="div-info-separador">
-                    <h3>FREE RETURNS</h3>
+                    <h3>REEMBOLSO GRATIS</h3>
                     <p>
                         Consectetur adipiscing elit. Ut elit tellus, luctus nec
                         ullamcorper mattis, pulvinar dapibus.

@@ -16,25 +16,30 @@ const Footer = () => {
                     </div>
                     <p>Grace Dietetica, la mejor de la costa Atlantica.</p>
                     <p>Av 75 N°1234, Necochea, Argentina.</p>
-                    <p>(2262) 48-6975</p>
+                    <p>(2262) 23-8371</p>
                     <p>contact@youroceanwpsite.com</p>
                     <p>Lun - Vie / 9:00 - 21:00</p>
                 </div>
-                <div className="info-footer">
-                    <h5>INFORMACIÓN</h5>
-                    <p>Sobre Nosotros</p>
-                    <p>Contacto</p>
-                    <p>Suscribirse</p>
-                </div>
-                <div className="info-footer">
-                    <h5>NUESTROS SERVICIO</h5>
-                    <Link to="/terminos&condiciones" className="link-footer">
-                        Términos y condiciones
-                    </Link>
-                    <Link to="/privacidad" className="link-footer">
-                        Privacidad
-                    </Link>
-                    <p>Métodos de pago</p>
+                <div className="container-info-footer">
+                    <div className="info-footer">
+                        <h5>INFORMACIÓN</h5>
+                        <p>Sobre Nosotros</p>
+                        <p>Contacto</p>
+                        <p>Suscribirse</p>
+                    </div>
+                    <div className="info-footer">
+                        <h5>NUESTROS SERVICIO</h5>
+                        <Link
+                            to="/terminos&condiciones"
+                            className="link-footer"
+                        >
+                            Términos y condiciones
+                        </Link>
+                        <Link to="/privacidad" className="link-footer">
+                            Privacidad
+                        </Link>
+                        <p>Métodos de pago</p>
+                    </div>
                 </div>
             </div>
             <div className="segunda-parte-footer">

@@ -15,3 +15,6 @@
     flex-wrap: wrap;
     gap: 2rem;
 }
+.container-destacados div h2 {
+    font-size: 2rem;
+}

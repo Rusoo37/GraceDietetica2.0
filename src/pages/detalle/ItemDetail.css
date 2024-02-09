@@ -67,3 +67,18 @@
     color: white;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .detalle {
+        flex-direction: column;
+    }
+    .primera-parte-detalle {
+        width: 80%;
+    }
+    .primera-parte-detalle img {
+        width: 100%;
+    }
+    .segunda-parte-detalle {
+        width: 80%;
+    }
+}

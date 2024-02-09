@@ -34,3 +34,8 @@
 .form-suscribirse button:hover {
     box-shadow: 0 0 5px 1px rgb(104, 198, 104);
 }
+@media (max-width: 400px) {
+    .container-suscribirse h1 {
+        font-size: 1.4rem;
+    }
+}

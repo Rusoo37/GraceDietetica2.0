@@ -37,3 +37,21 @@
     margin: 0;
     padding: 0;
 }
+@media (max-width: 700px) {
+    .container-card-carrito {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .primera-parte-carrito {
+        width: 50%;
+    }
+    .segunda-parte-carrito {
+        width: 100%;
+    }
+    .segunda-parte-carrito p {
+        font-size: 0.7rem;
+    }
+    .primera-segunda-parte-carrito h1 {
+        font-size: 1.4rem;
+    }
+}
