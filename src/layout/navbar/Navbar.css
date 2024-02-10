@@ -13,6 +13,12 @@
     align-items: center;
     gap: 1rem;
 }
+.container-first-navbar a {
+    width: 3%;
+}
+.container-first-navbar a img {
+    width: 100%;
+}
 .container-redes-navbar img {
     width: 3%;
     cursor: pointer;

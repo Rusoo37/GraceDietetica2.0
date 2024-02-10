@@ -1,7 +1,17 @@
-import { createContext, useEffect } from "react";
+import { createContext } from "react";
 import { useState } from "react";
 import { db } from "../firebaseconfig/FirebaseConfig";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import {
+    collection,
+    deleteDoc,
+    doc,
+    getDocs,
+    query,
+    updateDoc,
+    where,
+} from "firebase/firestore";
+import { notifyErroneo, notifyExitoso } from "../../utils/Alerts";
+import { useNavigate } from "react-router-dom";
 
 export const ItemContext = createContext();
 
@@ -11,7 +21,7 @@ const ItemContextComponent = ({ children }) => {
     const [cart, setCart] = useState(
         JSON.parse(localStorage.getItem("carrito")) || []
     );
-
+    const navigate = useNavigate();
     const coleccionDb = import.meta.env.VITE_COLECCION;
 
     const traerItems = (categoryName) => {
@@ -104,6 +114,23 @@ const ItemContextComponent = ({ children }) => {
         return producto && producto.cantidad ? producto.cantidad : 0;
     };
 
+    /* ELIMINAR PRODUCTO */
+
+    const eliminarPropiedad = async (propiedadId) => {
+        try {
+            const coleccionDb = import.meta.env.VITE_COLECCION;
+            const propiedadRef = doc(db, coleccionDb, propiedadId);
+
+            await deleteDoc(propiedadRef);
+
+            notifyExitoso("Propiedad eliminada con éxito.");
+            traerItems();
+        } catch (error) {
+            console.error("Error al eliminar la propiedad:", error.message);
+            notifyErroneo("Error al eliminar la propiedad");
+        }
+    };
+
     const data = {
         items,
         traerItems,
@@ -114,6 +141,7 @@ const ItemContextComponent = ({ children }) => {
         getTotalQuantity,
         getTotalPrice,
         getQuantityById,
+        eliminarPropiedad,
     };
 
     return <ItemContext.Provider value={data}>{children}</ItemContext.Provider>;

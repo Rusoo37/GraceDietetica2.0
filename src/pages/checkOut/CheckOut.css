@@ -21,9 +21,16 @@
 .form-checkout h2 {
     color: white;
 }
+.form-checkout div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: white;
+}
 .form-checkout input {
     padding: 0.6rem 1rem;
-    width: 80%;
+    width: 100%;
     border: none;
     border-radius: 0.5rem;
 }

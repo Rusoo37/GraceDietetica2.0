@@ -1,6 +1,9 @@
 import AboutUs from "../pages/aboutUs/AboutUs";
 import ContainerCarrito from "../pages/carrito/ContainerCarrito";
 import ContainerCheckOut from "../pages/checkOut/ContainerCheckOut";
+import ContainerDashboard from "../pages/dashboard/ContainerDashboard";
+import ContainerAgregar from "../pages/dashboard/common/agregar/ContainerAgregar";
+import ContainerEditar from "../pages/dashboard/common/editar/ContainerEditar";
 import ContainerDetail from "../pages/detalle/ContainerDetail";
 import Home from "../pages/home/Home";
 import ContainerItemList from "../pages/itemList/ContainerItemList";
@@ -59,4 +62,11 @@ export const routes = [
         path: "/checkOut",
         Element: ContainerCheckOut,
     },
+    {
+        id: "dashboard",
+        path: "/dashboard",
+        Element: ContainerDashboard,
+    },
+    { id: "editar", path: "/editar/:id", Element: ContainerEditar },
+    { id: "agregar", path: "/agregar", Element: ContainerAgregar },
 ];

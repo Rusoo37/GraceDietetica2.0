@@ -1,0 +1,23 @@
+.container-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+.btn-agregar-propiedad {
+    position: absolute;
+    background-color: rgb(125, 98, 98);
+    top: 1rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+.btn-agregar-propiedad:hover {
+    box-shadow: 0 0 5px 1px black;
+}
+.paginacion {
+    margin-top: 2rem;
+}

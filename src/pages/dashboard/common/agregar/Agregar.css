@@ -1,0 +1,50 @@
+.container-agregar {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+.form-agregar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(204, 162, 162);
+    padding: 1rem;
+}
+.form-agregar h2 {
+    color: white;
+}
+.form-agregar input {
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+.form-agregar textarea {
+    width: 80%;
+    min-height: 7rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+.form-agregar select {
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+.form-agregar button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.form-agregar button:hover {
+    box-shadow: 0 0 5px 1px black;
+}

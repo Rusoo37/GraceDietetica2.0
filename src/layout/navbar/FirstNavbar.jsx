@@ -23,10 +23,12 @@ const FirstNavbar = () => {
                     alt="icono whatsapp grace dietetica frutos secos semillas"
                     onClick={handleWhatsAppButtonClick}
                 />
-                <img
-                    src={instagram}
-                    alt="icono instagram grace dietetica frutos secos semillas"
-                />
+                <a href="https://www.instagram.com/grace.dietetica/">
+                    <img
+                        src={instagram}
+                        alt="icono instagram grace dietetica frutos secos semillas"
+                    />
+                </a>
                 <img
                     src={telefono}
                     alt="icono telefono grace dietetica frutos secos semillas"

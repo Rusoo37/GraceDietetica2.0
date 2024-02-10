@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ProductCarrito from "../../common/productCarrito/ProductCarrito";
 import Titulos from "../../common/titulos/Titulos";
 import "./Carrito.css";
+import ScrollToUp from "../../common/scrollUp/ScrollToUp";
 
 const Carrito = ({ cart, getTotalPrice, clearCart }) => {
     let total = getTotalPrice();
@@ -50,6 +51,7 @@ const Carrito = ({ cart, getTotalPrice, clearCart }) => {
                     Limpiar carrito
                 </button>
             </div>
+            <ScrollToUp />
         </div>
     );
 };

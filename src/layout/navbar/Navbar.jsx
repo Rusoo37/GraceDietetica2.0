@@ -46,9 +46,15 @@ const Navbar = ({ scrollToSection }) => {
                 >
                     Contacto
                 </button>
-                <Link to="/nosotros" className="link-nav">
-                    Sobre Nosotros
-                </Link>
+                {isLog ? (
+                    <Link to="/dashboard" className="link-nav">
+                        Dashboard
+                    </Link>
+                ) : (
+                    <Link to="/nosotros" className="link-nav">
+                        Sobre Nosotros
+                    </Link>
+                )}
                 {isLog ? (
                     <button onClick={logOut} className="btn-cerrar">
                         Cerrar sesión
