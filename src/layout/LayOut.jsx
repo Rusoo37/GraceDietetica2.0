@@ -18,7 +18,7 @@ const LayOut = () => {
             <FirstNavbar />
             <Navbar scrollToSection={scrollToSection} />
             <Outlet />
-            <Footer />
+            <Footer scrollToSection={scrollToSection} />
         </>
     );
 };

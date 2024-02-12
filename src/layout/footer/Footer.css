@@ -46,6 +46,17 @@
     flex-direction: column;
     gap: 1rem;
 }
+.link-footer-boton {
+    background: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: none;
+    color: white;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
 .info-footer p {
     margin: 0;
     padding: 0;
@@ -53,6 +64,8 @@
 .link-footer {
     text-decoration: none;
     color: white;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
 }
 .segunda-parte-footer {
     width: 100%;

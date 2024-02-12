@@ -116,7 +116,7 @@ const ItemContextComponent = ({ children }) => {
 
     /* ELIMINAR PRODUCTO */
 
-    const eliminarPropiedad = async (propiedadId) => {
+    const eliminarProducto = async (propiedadId) => {
         try {
             const coleccionDb = import.meta.env.VITE_COLECCION;
             const propiedadRef = doc(db, coleccionDb, propiedadId);
@@ -141,7 +141,7 @@ const ItemContextComponent = ({ children }) => {
         getTotalQuantity,
         getTotalPrice,
         getQuantityById,
-        eliminarPropiedad,
+        eliminarProducto,
     };
 
     return <ItemContext.Provider value={data}>{children}</ItemContext.Provider>;

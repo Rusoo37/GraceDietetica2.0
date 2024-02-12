@@ -4,15 +4,18 @@ const BestSeller = () => {
     return (
         <div className="container-best-seller">
             <div className="info-best-seller">
-                <h1>SIMPLE BUT ELEGANT</h1>
-                <h3>ULTIMATE COMFORT AND STYLE</h3>
+                <h1>ALMENDRAS</h1>
+                <h3>
+                    El consumo de almendra ayuda a reducir el colesterol
+                    sanguíneo total.
+                </h3>
                 <p>
-                    Nunc et sollicitudin arcu. Pellentesque varius odio at ante
-                    hendrerit faucibus. Ut tellus erat, tempor ac pulvinar
-                    dictum, pharetra nec nulla. Duis id justo erat. In a
-                    vehicula elit. Etiam accumsan suscipit ultrices.
-                    Pellentesque quis iaculis sapien. In quis risus nisi.
-                    Curabitur tincidunt congue vehicula.
+                    La almendra es el fruto del almendro, y tal como otros
+                    frutos secos, la semilla es la parte que se consume, la cual
+                    está envuelta por una película de color canela, además de
+                    una cáscara exterior que no es comestible, que representa un
+                    peso importante de la almendra (al remover esta cáscara, su
+                    peso se reduce un 40%), y una piel verde que se va secando.
                 </p>
             </div>
         </div>

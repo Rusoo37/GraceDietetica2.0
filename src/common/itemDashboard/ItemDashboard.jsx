@@ -5,7 +5,7 @@ import TableRow from "@mui/material/TableRow";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const ItemDashboard = ({ item, eliminarPropiedad }) => {
+const ItemDashboard = ({ item, eliminarProducto }) => {
     const handleDelete = () => {
         Swal.fire({
             title: "¿Estás seguro de eliminar esta propiedad?",
@@ -18,7 +18,7 @@ const ItemDashboard = ({ item, eliminarPropiedad }) => {
             cancelButtonText: "Cancelar",
         }).then((result) => {
             if (result.isConfirmed) {
-                eliminarPropiedad(item.id);
+                eliminarProducto(item.id);
             }
         });
     };

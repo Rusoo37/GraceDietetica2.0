@@ -9,6 +9,8 @@ const Login = ({
     setEmail,
     password,
     setPassword,
+    recordar,
+    setRecordar,
     handleLogin,
     recuperarPassword,
 }) => {
@@ -36,8 +38,14 @@ const Login = ({
                     />
                     <div className="datos-login">
                         <div>
-                            <input type="checkbox" id="recuperarContraseña" />
-                            <label htmlFor="recuperarContraseña">
+                            <input
+                                type="checkbox"
+                                id="recordarContraseña"
+                                name="recordarContraseña"
+                                value={recordar}
+                                onChange={(e) => setRecordar(e.target.value)}
+                            />
+                            <label htmlFor="recordarContraseña">
                                 Recordarme
                             </label>
                         </div>

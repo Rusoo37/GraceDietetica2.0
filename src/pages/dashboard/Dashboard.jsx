@@ -24,7 +24,7 @@ const Dashboard = ({
     currentPage,
 }) => {
     const pageCount = Math.ceil(totalProducts / productsPerPage);
-    const { eliminarPropiedad } = useContext(ItemContext);
+    const { eliminarProducto } = useContext(ItemContext);
 
     const StyledTableCell = styled(TableCell)(({ theme }) => ({
         [`&.${tableCellClasses.head}`]: {
@@ -84,7 +84,7 @@ const Dashboard = ({
                                 <ItemDashboard
                                     item={item}
                                     key={item.id}
-                                    eliminarPropiedad={eliminarPropiedad}
+                                    eliminarProducto={eliminarProducto}
                                 />
                             ))}
                     </TableBody>

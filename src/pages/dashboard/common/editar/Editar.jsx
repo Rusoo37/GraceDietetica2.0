@@ -2,7 +2,12 @@ import { ToastContainer } from "react-toastify";
 import Titulos from "../../../../common/titulos/Titulos";
 import "./Editar.css";
 
-const Editar = ({ producto, setProducto, handleEditProduct }) => {
+const Editar = ({
+    producto,
+    setProducto,
+    handleEditProduct,
+    handleImageChange,
+}) => {
     return (
         <div className="container-editar">
             <Titulos titulo={"Editar producto"} />
@@ -44,6 +49,22 @@ const Editar = ({ producto, setProducto, handleEditProduct }) => {
                         })
                     }
                 />
+                <div
+                    style={{
+                        width: "80%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
+                    <label htmlFor="nuevaImagen">Nueva imagen</label>
+                    <input
+                        type="file"
+                        id="nuevaImagen"
+                        accept="image/*"
+                        onChange={handleImageChange}
+                    />
+                </div>
                 <textarea
                     type="text"
                     placeholder="Descripción"

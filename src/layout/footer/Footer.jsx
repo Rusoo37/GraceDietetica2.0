@@ -2,7 +2,7 @@ import "./Footer.css";
 import logo from "./../../img/logo.png";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ scrollToSection }) => {
     return (
         <div className="container-footer">
             <div className="primera-parte-footer" id="footer">
@@ -23,8 +23,15 @@ const Footer = () => {
                 <div className="container-info-footer">
                     <div className="info-footer">
                         <h5>INFORMACIÓN</h5>
-                        <p>Sobre Nosotros</p>
-                        <p>Contacto</p>
+                        <Link to="/nosotros" className="link-footer">
+                            Sobre Nosotros
+                        </Link>
+                        <button
+                            className="link-footer-boton"
+                            onClick={() => scrollToSection("footer")}
+                        >
+                            Contacto
+                        </button>
                         <p>Suscribirse</p>
                     </div>
                     <div className="info-footer">

@@ -6,23 +6,17 @@ const SeparadorHome = () => {
             <div className="container-info-separador">
                 <div className="div-info-separador">
                     <h3>DELIVERY RÁPIDO</h3>
-                    <p>
-                        Consectetur adipiscing elit. Ut elit tellus, luctus nec
-                        ullamcorper mattis, pulvinar dapibus.
-                    </p>
+                    <p>Por tan solo $300.</p>
                 </div>
                 <div className="div-info-separador">
                     <h3>PEDIDOS SEGUROS</h3>
-                    <p>
-                        Consectetur adipiscing elit. Ut elit tellus, luctus nec
-                        ullamcorper mattis, pulvinar dapibus.
-                    </p>
+                    <p>Realiza tu pedido por Whatsapp o mail.</p>
                 </div>
                 <div className="div-info-separador">
                     <h3>REEMBOLSO GRATIS</h3>
                     <p>
-                        Consectetur adipiscing elit. Ut elit tellus, luctus nec
-                        ullamcorper mattis, pulvinar dapibus.
+                        Ante cualquier inconveniente, te reembolsaremos tu
+                        pedido.
                     </p>
                 </div>
             </div>

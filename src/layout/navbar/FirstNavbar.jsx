@@ -17,29 +17,34 @@ const FirstNavbar = () => {
     };
     return (
         <div className="container-first-navbar">
-            <div className="container-redes-navbar" style={{ width: "30%" }}>
-                <img
-                    src={whatsapp}
-                    alt="icono whatsapp grace dietetica frutos secos semillas"
-                    onClick={handleWhatsAppButtonClick}
-                />
-                <a href="https://www.instagram.com/grace.dietetica/">
+            <div className="first-navbar">
+                <div className="container-redes-navbar">
                     <img
-                        src={instagram}
-                        alt="icono instagram grace dietetica frutos secos semillas"
+                        src={whatsapp}
+                        alt="icono whatsapp grace dietetica frutos secos semillas"
+                        onClick={handleWhatsAppButtonClick}
                     />
-                </a>
-                <img
-                    src={telefono}
-                    alt="icono telefono grace dietetica frutos secos semillas"
-                />
-                <img
-                    src={correo}
-                    alt="icono correo grace dietetica frutos secos semillas"
-                />
-            </div>
-            <div className="container-redes-navbar">
-                <p>Grace Dietetica</p>
+                    <a href="https://www.instagram.com/grace.dietetica/">
+                        <img
+                            src={instagram}
+                            alt="icono instagram grace dietetica frutos secos semillas"
+                        />
+                    </a>
+                    <img
+                        src={telefono}
+                        alt="icono telefono grace dietetica frutos secos semillas"
+                    />
+                    <img
+                        src={correo}
+                        alt="icono correo grace dietetica frutos secos semillas"
+                    />
+                </div>
+                <div
+                    className="container-redes-navbar"
+                    style={{ justifyContent: "end" }}
+                >
+                    <p>Grace Dietetica</p>
+                </div>
             </div>
         </div>
     );

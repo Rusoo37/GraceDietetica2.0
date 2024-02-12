@@ -43,6 +43,21 @@ const ContainerEditar = () => {
         }
     };
 
+    /* CAMBIAR IMAGEN */
+    const handleImageChange = async (e) => {
+        const logoImage = e.target.files[0];
+
+        if (logoImage) {
+            const storageRef = ref(storage, `imagenes/${logoImage.name}`);
+            await uploadBytes(storageRef, logoImage);
+            const logoUrl = await getDownloadURL(storageRef);
+            setProducto((prevProduct) => ({
+                ...prevProduct,
+                imagen: logoUrl,
+            }));
+        }
+    };
+
     return loading ? (
         <p>Cargando</p>
     ) : isLog ? (
@@ -50,6 +65,7 @@ const ContainerEditar = () => {
             setProducto={setProducto}
             producto={producto}
             handleEditProduct={handleEditProduct}
+            handleImageChange={handleImageChange}
         />
     ) : (
         <div

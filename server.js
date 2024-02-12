@@ -10,9 +10,10 @@ const app = express();
 const PORT = 5173;
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static("public")); // Reemplaza "public" con tu directorio estático
+console.log("Configurando la ruta /checkOut");
 app.post("/checkOut", (req, res) => {
+    console.log("Solicitud recibida en /checkOut");
     const { email, telefono, direccion } = req.body;
 
     // Configurar nodemailer con tus credenciales de correo electrónico

@@ -47,13 +47,13 @@ const ContainerAgregar = () => {
 
         try {
             const docRef = await addDoc(propiedadColeccion, producto);
-            console.log("Propiedad guardada en Firebase con ID:", docRef.id);
+            console.log("Producto guardada en Firebase con ID:", docRef.id);
             notifyExitoso("Producto agregado exitosamente!");
             traerItems();
             navigate("/dashboard");
         } catch (error) {
             console.error(error.message);
-            notifyErroneo("Error al guardar la propiedad");
+            notifyErroneo("Error al guardar el producto");
         }
     };
 

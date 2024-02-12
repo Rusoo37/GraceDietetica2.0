@@ -14,8 +14,11 @@ import { app } from "../firebaseconfig/FirebaseConfig.js";
 export const LoginContext = createContext();
 
 const LoginContextComponent = ({ children }) => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState(localStorage.getItem("email") || "");
+    const [password, setPassword] = useState(
+        localStorage.getItem("password") || ""
+    );
+    const [recordar, setRecordar] = useState(false);
     const [isLog, setIsLog] = useState(false);
     const navigate = useNavigate();
     const auth = getAuth(app);
@@ -48,7 +51,10 @@ const LoginContextComponent = ({ children }) => {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             notifyExitoso("Inicio de sesión exitoso");
-
+            if (recordar) {
+                localStorage.setItem("email", email);
+                localStorage.setItem("password", password);
+            }
             setIsLog(true);
             navigate("/");
         } catch (error) {
@@ -76,6 +82,8 @@ const LoginContextComponent = ({ children }) => {
         password,
         setPassword,
         isLog,
+        recordar,
+        setRecordar,
         handleLogin,
         logOut,
     };
