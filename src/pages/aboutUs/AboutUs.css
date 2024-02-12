@@ -18,8 +18,33 @@
 .container-info-about div {
     width: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+.inputContactoEdicion {
+    width: 20rem;
+    max-width: 20rem;
+    padding: 0.5rem;
+    min-height: 10rem;
+    max-height: 15rem;
+}
+.inputContacto {
+    width: 20rem;
+    max-width: 20rem;
+    padding: 0.5rem;
+    min-height: 10rem;
+    max-height: 15rem;
+}
+.container-info-about div button {
+    width: 20%;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.container-info-about div button:hover {
+    box-shadow: 0 0 5px 1px black;
 }
 @media (max-width: 600px) {
     .container-info-about {

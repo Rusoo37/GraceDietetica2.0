@@ -4,4 +4,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+}
+.guardarCambios {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    border: none;
+    background-color: rgb(77, 189, 77);
+    cursor: pointer;
+    color: white;
+}
+.guardarCambios:hover {
+    box-shadow: 0 0 5px 1px black;
 }

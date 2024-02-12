@@ -9,7 +9,8 @@ import {
 } from "firebase/auth";
 import { notifyErroneo, notifyExitoso } from "./../../utils/Alerts.js";
 import { useNavigate } from "react-router-dom";
-import { app } from "../firebaseconfig/FirebaseConfig.js";
+import { app, db } from "../firebaseconfig/FirebaseConfig.js";
+import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
 
 export const LoginContext = createContext();
 
@@ -22,6 +23,53 @@ const LoginContextComponent = ({ children }) => {
     const [isLog, setIsLog] = useState(false);
     const navigate = useNavigate();
     const auth = getAuth(app);
+    const [dataInfo, setDataInfo] = useState({});
+    const coleccionInfoDb = import.meta.env.VITE_COLECCION_INFORMACION;
+    const idInfoDoc = import.meta.env.VITE_ID_DOC_INFORMACION;
+
+    /* INFORMACION */
+
+    useEffect(() => {
+        let infoColeccion = collection(db, coleccionInfoDb);
+
+        getDocs(infoColeccion)
+            .then((res) => {
+                let newArr = res.docs.map((inf) => ({
+                    ...inf.data(),
+                    id: inf.id,
+                }));
+                setDataInfo(newArr[0]);
+            })
+            .catch((error) => {
+                console.error("Error al cargar la información:", error);
+            });
+    }, []);
+
+    const handleChangeInfo = (e) => {
+        const { name, value } = e.target;
+        setDataInfo((prevInfo) => ({
+            ...prevInfo,
+            [name]: value,
+        }));
+    };
+
+    const guardarCambios = () => {
+        const infoDocRef = doc(db, coleccionInfoDb, idInfoDoc);
+        // Utiliza setDoc para sobrescribir la información en el documento
+        updateDoc(infoDocRef, dataInfo)
+            .then(() => {
+                console.log("Documento actualizado exitosamente");
+                notifyExitoso("Cambios actualizados correctamente");
+                // Puedes realizar más acciones después de que el documento se haya actualizado con éxito.
+            })
+            .catch((error) => {
+                console.error("Error al actualizar el documento:", error);
+                notifyErroneo("Error al actualizar los datos");
+                // Manejar el error si la operación falla.
+            });
+    };
+
+    /* LOGIN */
 
     useEffect(() => {
         const checkAuthStatus = async () => {
@@ -86,6 +134,9 @@ const LoginContextComponent = ({ children }) => {
         setRecordar,
         handleLogin,
         logOut,
+        dataInfo,
+        handleChangeInfo,
+        guardarCambios,
     };
 
     return (

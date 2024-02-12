@@ -1,22 +1,72 @@
+import { useContext, useState } from "react";
 import "./BestSeller.css";
+import { LoginContext } from "../../../../context/LoginContext";
 
 const BestSeller = () => {
+    const { isLog, dataInfo, handleChangeInfo } = useContext(LoginContext);
+    const [edicion, setEdicion] = useState(true);
     return (
         <div className="container-best-seller">
             <div className="info-best-seller">
-                <h1>ALMENDRAS</h1>
-                <h3>
-                    El consumo de almendra ayuda a reducir el colesterol
-                    sanguíneo total.
-                </h3>
-                <p>
-                    La almendra es el fruto del almendro, y tal como otros
-                    frutos secos, la semilla es la parte que se consume, la cual
-                    está envuelta por una película de color canela, además de
-                    una cáscara exterior que no es comestible, que representa un
-                    peso importante de la almendra (al remover esta cáscara, su
-                    peso se reduce un 40%), y una piel verde que se va secando.
-                </p>
+                {isLog ? (
+                    <textarea
+                        type="text"
+                        name="bestSellerTitulo"
+                        value={
+                            dataInfo ? dataInfo.bestSellerTitulo : "Cargando.."
+                        }
+                        onChange={handleChangeInfo}
+                        disabled={edicion}
+                        className={
+                            !edicion
+                                ? "inputBestSellerEdicion"
+                                : "inputBestSeller"
+                        }
+                    />
+                ) : (
+                    <h1>{dataInfo && dataInfo.bestSellerTitulo}</h1>
+                )}
+                {isLog ? (
+                    <textarea
+                        type="text"
+                        name="bestSellerSubtitulo"
+                        value={
+                            dataInfo
+                                ? dataInfo.bestSellerSubtitulo
+                                : "Cargando.."
+                        }
+                        onChange={handleChangeInfo}
+                        disabled={edicion}
+                        className={
+                            !edicion
+                                ? "inputBestSellerEdicion"
+                                : "inputBestSeller"
+                        }
+                    />
+                ) : (
+                    <h3>{dataInfo && dataInfo.bestSellerSubtitulo}</h3>
+                )}
+                {isLog ? (
+                    <textarea
+                        type="text"
+                        name="bestSellerInfo"
+                        value={
+                            dataInfo ? dataInfo.bestSellerInfo : "Cargando.."
+                        }
+                        onChange={handleChangeInfo}
+                        disabled={edicion}
+                        className={
+                            !edicion
+                                ? "inputBestSellerEdicionInfo"
+                                : "inputBestSellerInfo"
+                        }
+                    />
+                ) : (
+                    <p>{dataInfo && dataInfo.bestSellerInfo}</p>
+                )}
+                {isLog && (
+                    <button onClick={() => setEdicion(!edicion)}>Editar</button>
+                )}
             </div>
         </div>
     );

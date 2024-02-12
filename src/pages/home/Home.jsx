@@ -9,8 +9,11 @@ import SeparadorHome from "./common/separador/SeparadorHome";
 import Suscribirse from "./common/suscribirse/Suscribirse";
 import Testimonios from "./common/testimonios/Testimonios";
 import ScrollToUp from "../../common/scrollUp/ScrollToUp";
+import { useContext } from "react";
+import { LoginContext } from "../../context/LoginContext";
 
 const Home = () => {
+    const { isLog, guardarCambios } = useContext(LoginContext);
     return (
         <div className="container-home">
             <Header />
@@ -23,6 +26,11 @@ const Home = () => {
             <Suscribirse />
             <ToastContainer />
             <ScrollToUp />
+            {isLog && (
+                <button onClick={guardarCambios} className="guardarCambios">
+                    Guardar Cambios
+                </button>
+            )}
         </div>
     );
 };

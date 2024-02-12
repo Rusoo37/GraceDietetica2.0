@@ -1,20 +1,37 @@
+import { useContext, useState } from "react";
 import Titulos from "../../common/titulos/Titulos";
 import "./AboutUs.css";
+import { LoginContext } from "../../context/LoginContext";
 
 const AboutUs = () => {
+    const { isLog, dataInfo, handleChangeInfo } = useContext(LoginContext);
+    const [edicion, setEdicion] = useState(true);
     return (
         <div className="container-about-us">
             <Titulos titulo={"Sobre Nosotros"} />
             <div className="container-info-about">
                 <div>
-                    <p>
-                        Nunc et sollicitudin arcu. Pellentesque varius odio at
-                        ante hendrerit faucibus. Ut tellus erat, tempor ac
-                        pulvinar dictum, pharetra nec nulla. Duis id justo erat.
-                        In a vehicula elit. Etiam accumsan suscipit ultrices.
-                        Pellentesque quis iaculis sapien. In quis risus nisi.
-                        Curabitur tincidunt congue vehicula.
-                    </p>
+                    {isLog ? (
+                        <textarea
+                            type="text"
+                            name="nosotros"
+                            value={dataInfo ? dataInfo.nosotros : "Cargando.."}
+                            onChange={handleChangeInfo}
+                            disabled={edicion}
+                            className={
+                                !edicion
+                                    ? "inputContactoEdicion"
+                                    : "inputContacto"
+                            }
+                        />
+                    ) : (
+                        <p>{dataInfo && dataInfo.nosotros}</p>
+                    )}
+                    {isLog && (
+                        <button onClick={() => setEdicion(!edicion)}>
+                            Editar
+                        </button>
+                    )}
                 </div>
                 <div>
                     <img src="imagen" alt="imagen" />
