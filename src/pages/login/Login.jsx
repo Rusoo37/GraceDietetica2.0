@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Login.css";
 import Titulos from "../../common/titulos/Titulos";
-import logo from "./../../img/logoOscuro.jpeg";
+import logo from "./../../img/logoOscuro.webp";
 import { ToastContainer } from "react-toastify";
 
 const Login = ({
