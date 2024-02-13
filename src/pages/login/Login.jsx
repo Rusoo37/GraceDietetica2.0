@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Login.css";
 import Titulos from "../../common/titulos/Titulos";
 import logo from "./../../img/logoOscuro.webp";
