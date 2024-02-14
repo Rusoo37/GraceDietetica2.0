@@ -5,6 +5,7 @@ import { notifyExitoso } from "../../../utils/Alerts";
 
 const ContainerCheckOut = () => {
     const [formData, setFormData] = useState({
+        nombre: "",
         email: "",
         telefono: "",
         direccion: "",

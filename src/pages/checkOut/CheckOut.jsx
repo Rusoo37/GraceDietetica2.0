@@ -11,9 +11,21 @@ const CheckOut = ({ handleSubmit, handleChange, formData }) => {
             <form className="form-checkout" onSubmit={handleSubmit}>
                 <h2>Enviar Formulario</h2>
                 <div>
+                    <label htmlFor="nombre">Nombre:</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Nombre"
+                        value={formData.nombre}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div>
                     <label htmlFor="email">Email:</label>
                     <input
-                        type="email"
+                        type="mail"
                         id="email"
                         name="email"
                         placeholder="Email"
