@@ -63,11 +63,13 @@ const Agregar = ({
                     }
                 >
                     <option value="">Seleccionar categoria</option>
-                    <option value="cereales">Cereales</option>
-                    <option value="frutos-secos">Frutos Secos</option>
+                    <option value="cereales">Cereal</option>
+                    <option value="frutos-secos">Fruto Seco</option>
                     <option value="despensa">Despensa</option>
-                    <option value="bebidas">Bebidas</option>
-                    <option value="suplementos">Suplementos</option>
+                    <option value="bebidas">Bebida</option>
+                    <option value="suplementos">Suplemento</option>
+                    <option value="semilla">Semilla</option>
+                    <option value="condimentos">Condimento</option>
                 </select>
                 <textarea
                     type="text"

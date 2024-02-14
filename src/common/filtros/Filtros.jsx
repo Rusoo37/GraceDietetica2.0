@@ -74,6 +74,16 @@ const Filtros = () => {
                     Semillas
                 </button>
             </Link>
+            <Link to="/categoria/condimentos">
+                <button
+                    className={`botonFiltros ${
+                        botonActivo === 6 ? "activo" : ""
+                    }`}
+                    onClick={() => handleBotonClick(6)}
+                >
+                    Condimentos
+                </button>
+            </Link>
         </div>
     );
 };

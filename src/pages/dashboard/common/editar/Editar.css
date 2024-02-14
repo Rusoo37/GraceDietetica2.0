@@ -27,6 +27,12 @@
     border-radius: 0.3rem;
     border: none;
 }
+.form-editar select {
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: none;
+}
 .form-editar textarea {
     width: 80%;
     min-height: 7rem;

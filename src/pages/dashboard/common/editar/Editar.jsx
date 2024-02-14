@@ -37,10 +37,8 @@ const Editar = ({
                         })
                     }
                 />
-                <input
-                    type="text"
-                    placeholder="Categoria del producto"
-                    required
+                <select
+                    id="miSelect"
                     value={producto.categoria}
                     onChange={(e) =>
                         setProducto({
@@ -48,7 +46,16 @@ const Editar = ({
                             categoria: e.target.value,
                         })
                     }
-                />
+                >
+                    <option value="">Seleccionar categoria</option>
+                    <option value="cereales">Cereal</option>
+                    <option value="frutos-secos">Fruto Seco</option>
+                    <option value="despensa">Despensa</option>
+                    <option value="bebidas">Bebida</option>
+                    <option value="suplementos">Suplemento</option>
+                    <option value="semilla">Semilla</option>
+                    <option value="condimentos">Condimento</option>
+                </select>
                 <div
                     style={{
                         width: "80%",
