@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "./../../img/logo.png";
 import carrito from "./../../img/carrito.png";
 import { LoginContext } from "../../context/LoginContext";
+import menu from "./../../img/menu.png";
 
 const Navbar = ({ scrollToSection }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -32,42 +33,51 @@ const Navbar = ({ scrollToSection }) => {
                     </div>
                 </Link>
             </div>
-            <div className="links-navbar">
-                <Link to="/productos" className="link-nav">
-                    Productos
-                </Link>
-                <button
-                    className="link-nav"
-                    style={{
-                        background: "none",
-                        border: "none",
-                    }}
-                    onClick={() => scrollToSection("footer")}
-                >
-                    Contacto
-                </button>
-                {isLog ? (
-                    <Link to="/dashboard" className="link-nav">
-                        Dashboard
+            <input type="checkbox" name="" id="toggle"></input>
+            <div className="menu">
+                <div className="links-navbar">
+                    <Link to="/productos" className="link-nav">
+                        Productos
                     </Link>
-                ) : (
-                    <Link to="/nosotros" className="link-nav">
-                        Sobre Nosotros
-                    </Link>
-                )}
-                {isLog ? (
-                    <button onClick={logOut} className="btn-cerrar">
-                        Cerrar sesión
+                    <button
+                        className="link-nav"
+                        style={{
+                            background: "none",
+                            border: "none",
+                        }}
+                        onClick={() => scrollToSection("footer")}
+                    >
+                        Contacto
                     </button>
-                ) : (
-                    <Link to="login" className="link-nav">
-                        Mi cuenta
+                    {isLog ? (
+                        <Link to="/dashboard" className="link-nav">
+                            Dashboard
+                        </Link>
+                    ) : (
+                        <Link to="/nosotros" className="link-nav">
+                            Sobre Nosotros
+                        </Link>
+                    )}
+                    {isLog ? (
+                        <button onClick={logOut} className="btn-cerrar">
+                            Cerrar sesión
+                        </button>
+                    ) : (
+                        <Link to="login" className="link-nav">
+                            Mi cuenta
+                        </Link>
+                    )}
+                    <Link to="/carrito" className="carrito-navbar">
+                        <img src={carrito} alt="Carrito de compras" />
                     </Link>
-                )}
-                <Link to="/carrito" className="carrito-navbar">
-                    <img src={carrito} alt="Carrito de compras" />
-                </Link>
+                </div>
             </div>
+            <label htmlFor="toggle">
+                <img
+                    src={menu}
+                    alt="menu Grace Dietetica frutos secos semillas cereales"
+                />
+            </label>
         </div>
     );
 };

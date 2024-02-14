@@ -64,7 +64,7 @@ const Filtros = () => {
                     Bebidas
                 </button>
             </Link>
-            <Link to="/categoria/cereales">
+            <Link to="/categoria/semillas">
                 <button
                     className={`botonFiltros ${
                         botonActivo === 5 ? "activo" : ""

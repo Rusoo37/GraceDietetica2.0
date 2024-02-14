@@ -18,7 +18,7 @@ const Footer = ({ scrollToSection }) => {
                     <p>Av 75 N°1234, Necochea, Argentina.</p>
                     <p>(2262) 23-8371</p>
                     <p>contact@youroceanwpsite.com</p>
-                    <p>Lun - Vie / 9:00 - 21:00</p>
+                    <p>Lun - Sab / 9:00 - 13:00 / 18:00 - 21:00</p>
                 </div>
                 <div className="container-info-footer">
                     <div className="info-footer">

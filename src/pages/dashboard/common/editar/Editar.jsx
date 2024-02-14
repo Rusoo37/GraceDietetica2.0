@@ -53,7 +53,7 @@ const Editar = ({
                     <option value="despensa">Despensa</option>
                     <option value="bebidas">Bebida</option>
                     <option value="suplementos">Suplemento</option>
-                    <option value="semilla">Semilla</option>
+                    <option value="semillas">Semilla</option>
                     <option value="condimentos">Condimento</option>
                 </select>
                 <div

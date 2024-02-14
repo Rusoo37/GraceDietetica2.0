@@ -15,6 +15,11 @@ const FirstNavbar = () => {
         )}`;
         window.open(whatsappLink, "_blank");
     };
+
+    const handleInstagramButtonClick = () => {
+        const InstagramLink = "https://www.instagram.com/grace.dietetica/";
+        window.open(InstagramLink, "_blank");
+    };
     return (
         <div className="container-first-navbar">
             <div className="first-navbar">
@@ -24,12 +29,11 @@ const FirstNavbar = () => {
                         alt="icono whatsapp grace dietetica frutos secos semillas"
                         onClick={handleWhatsAppButtonClick}
                     />
-                    <a href="https://www.instagram.com/grace.dietetica/">
-                        <img
-                            src={instagram}
-                            alt="icono instagram grace dietetica frutos secos semillas"
-                        />
-                    </a>
+                    <img
+                        src={instagram}
+                        alt="icono instagram grace dietetica frutos secos semillas"
+                        onClick={handleInstagramButtonClick}
+                    />
                     <img
                         src={telefono}
                         alt="icono telefono grace dietetica frutos secos semillas"

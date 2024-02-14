@@ -2,6 +2,10 @@
 /* font-family: 'Poppins', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 /* font-family: 'Anton', sans-serif;  */
+/* font-family: "Protest Guerrilla", sans-serif;  */
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+/*  font-family: "Titillium Web", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 body {
     padding: 0;
     margin: 0;
@@ -41,19 +45,27 @@ h1 {
     letter-spacing: 0.2rem;
 }
 h2 {
-    font-family: "Anton", sans-serif;
     letter-spacing: 0.2rem;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 h3 {
-    font-family: "Anton", sans-serif;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     letter-spacing: 0.1rem;
 }
 h4 {
-    font-family: "Anton", sans-serif;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     letter-spacing: 0.15rem;
 }
 h5 {
-    font-family: "Anton", sans-serif;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     letter-spacing: 0.1rem;
 }
 

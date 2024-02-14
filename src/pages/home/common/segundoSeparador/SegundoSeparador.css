@@ -54,4 +54,10 @@
     .container-info-segundo-separador img {
         width: 35%;
     }
+    .info-detallado-separador h3 {
+        font-size: 1rem;
+    }
+    .info-detallado-separador p {
+        font-size: 0.6rem;
+    }
 }
