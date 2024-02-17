@@ -4,7 +4,12 @@ import Titulos from "../../common/titulos/Titulos";
 import "./Carrito.css";
 import ScrollToUp from "../../common/scrollUp/ScrollToUp";
 
-const Carrito = ({ cart, getTotalPrice, clearCart }) => {
+const Carrito = ({
+    cart,
+    getTotalPrice,
+    clearCart,
+    handleWhatsAppButtonClick,
+}) => {
     let total = getTotalPrice();
     return (
         <div className="container-carrito">
@@ -38,9 +43,15 @@ const Carrito = ({ cart, getTotalPrice, clearCart }) => {
                 )}
             </div>
             <div className="container-btns-cart">
-                <Link to="/checkOut" className="solicitar-pedido">
+                {/* <Link to="/checkOut" className="solicitar-pedido">
                     Solicitar pedido
-                </Link>
+                </Link> */}
+                <button
+                    className="solicitar-pedido"
+                    onClick={handleWhatsAppButtonClick}
+                >
+                    Solicitar pedido
+                </button>
                 <button
                     onClick={clearCart}
                     style={{

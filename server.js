@@ -1,6 +1,14 @@
-/* import nodemailer from "nodemailer";
+import express from "express";
+import nodemailer from "nodemailer";
+import bodyParser from "body-parser";
 
-// Configuración del servicio de correo electrónico
+const app = express();
+const port = process.env.PORT || 3001;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Configuración de nodemailer
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -9,22 +17,26 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-export const enviarMail = async (email, message) => {
-    try {
-        const correoOptions = {
-            from: `${email} <no-reply@coderplate40.com>`,
-            to: "millorusito@gmail.com",
-            subject: "Nuevo pedido",
-            text: message,
-        };
-        transporter.sendMail(correoOptions, (error, info) => {
-            if (error) {
-                console.log(error);
-            }
-            console.log("Correo electrónico enviado:", info.response);
-        });
-    } catch (error) {
-        console.error(error);
-    }
-};
- */
+// Ruta para enviar correos electrónicos
+app.post("/enviar-correo", (req, res) => {
+    const { nombre, correo, mensaje } = req.body;
+
+    const mailOptions = {
+        from: "tu_correo@gmail.com",
+        to: "millorusito@gmail.com",
+        subject: "Nuevo mensaje del formulario",
+        text: `Nombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${mensaje}`,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return res.status(500).send(error.toString());
+        }
+        res.status(200).send("Correo enviado: " + info.response);
+    });
+});
+
+// Inicia el servidor
+app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+});
